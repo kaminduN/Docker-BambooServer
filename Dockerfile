@@ -17,7 +17,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe restricted m
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
   apt-get update && apt-get upgrade && \
   apt-get install  --no-install-recommends --no-install-suggests -yq oracle-java8-installer && \
-  apt-get install  --no-install-recommends --no-install-suggests -yq oracle-java8-set-default git subversion maven gradle && \
+  apt-get install  --no-install-recommends --no-install-suggests -yq oracle-java8-set-default git subversion maven ssh && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
   chmod +x /usr/local/bin/bamboo-server.sh
 
