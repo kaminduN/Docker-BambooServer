@@ -23,7 +23,7 @@ else
   tar xzf /tmp/atlassian-bamboo.tar.gz -C /opt
   rm -f /tmp/atlassian-bamboo.tar.gz
   echo "-> Adding MySQL driver"
-  tar xzf /tmp/mysql-connector-java.tar.gz -C $BAMBOO_DIR/lib/
+  tar zxvf mysql-connector-java-5.1.40.tar.gz -C $BAMBOO_DIR/lib/ --strip-components 1 ./mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar
   rm -f /tmp/mysql-connector-java.tar.gz
   echo "-> Installation completed"
 fi
