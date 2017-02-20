@@ -1,12 +1,11 @@
 FROM ubuntu:latest
 
 # Environment for Bamboo
-ENV BAMBOO_VERSION 5.14.4.1
-ENV BAMBOO_HOME /home/bamboo
+ENV BAMBOO_VERSION=5.15.0.1 \
+  BAMBOO_HOME=/home/bamboo
 
 # Expose ports (web/agent)
-EXPOSE 8085
-EXPOSE 54663
+EXPOSE 8085 54663
 
 ADD bamboo-server.sh /usr/local/bin/bamboo-server.sh
 
