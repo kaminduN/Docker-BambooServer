@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Environment for Bamboo
-ENV BAMBOO_VERSION=5.15.0.1 \
+ENV BAMBOO_VERSION=5.15.3 \
   BAMBOO_HOME=/home/bamboo
 
 # Expose ports (web/agent)
