@@ -15,11 +15,11 @@ if [ -d $BAMBOO_DIR ]; then
 else
   BAMBOO_TARBALL_URL=http://downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-$BAMBOO_VERSION.tar.gz
   MYSQLDRIVER_TARBALL_URL=https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.40.tar.gz
-  echo "-> Downloading Bamboo $BAMBOO_VERSION from $BAMBOO_TARBALL_URL ..."
-  wget --progress=dot:mega $BAMBOO_TARBALL_URL -O /tmp/atlassian-bamboo.tar.gz
-  echo "-> Downloading MySQL driver from $MYSQLDRIVER_TARBALL_URL ..."
-  wget --progress=dot:mega $MYSQLDRIVER_TARBALL_URL -O /tmp/mysql-connector-java.tar.gz
-  echo "-> Extracting to $BAMBOO_DIR ..."
+  echo "-> Downloading Bamboo $BAMBOO_VERSION..."
+  wget -nv --show-progress --progress=dot:mega $BAMBOO_TARBALL_URL -O /tmp/atlassian-bamboo.tar.gz
+  echo "-> Downloading MySQL driver..."
+  wget -nv --show-progress --progress=dot:mega $MYSQLDRIVER_TARBALL_URL -O /tmp/mysql-connector-java.tar.gz
+  echo "-> Extracting to $BAMBOO_DIR..."
   tar xzf /tmp/atlassian-bamboo.tar.gz -C /opt
   rm -f /tmp/atlassian-bamboo.tar.gz
   echo "-> Adding MySQL driver"
