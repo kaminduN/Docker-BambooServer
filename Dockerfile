@@ -1,7 +1,7 @@
 FROM eledge/ubuntu-openjdk8:latest
 
 # Environment for Bamboo
-ENV BAMBOO_VERSION=5.15.3 \
+ENV BAMBOO_VERSION=6.0.0 \
   BAMBOO_HOME=/home/bamboo
 
 # Expose ports (web/agent)
@@ -18,7 +18,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && chmod +x /usr/local/bin/bamboo-server.sh
 
-VOLUME ["/home/bamboo","/opt/atlassian-bamboo-5.15.3/logs"]
+VOLUME ["/home/bamboo","/opt/atlassian-bamboo-6.0.0/logs"]
 
 # Run script on start up
 CMD ["/usr/local/bin/bamboo-server.sh"]

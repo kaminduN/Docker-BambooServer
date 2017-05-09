@@ -10,7 +10,7 @@ mkdir -p $BAMBOO_HOME
 
 BAMBOO_DIR=/opt/atlassian-bamboo-$BAMBOO_VERSION
 
-if [ -d $BAMBOO_DIR ]; then
+if [ -d $BAMBOO_DIR/bin ]; then
   echo "-> Bamboo $BAMBOO_VERSION already found at $BAMBOO_DIR. Skipping download."
 else
   BAMBOO_TARBALL_URL=http://downloads.atlassian.com/software/bamboo/downloads/atlassian-bamboo-$BAMBOO_VERSION.tar.gz
