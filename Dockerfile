@@ -1,4 +1,4 @@
-FROM eledge/ubuntu-openjdk8:latest
+FROM openjdk:latest
 
 # Environment for Bamboo
 ENV BAMBOO_VERSION=6.0.0 \
@@ -13,7 +13,7 @@ ADD resources/bamboo-server.sh /usr/local/bin/bamboo-server.sh
 # Install additional dependencies & add execute rights to script
 RUN apt-get update \
   && apt-get install --no-install-recommends --no-install-suggests -yq software-properties-common python-software-properties \
-  && apt-get install --no-install-recommends --no-install-suggests -yq git maven ssh \
+  && apt-get install --no-install-recommends --no-install-suggests -yq maven ssh \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && chmod +x /usr/local/bin/bamboo-server.sh
