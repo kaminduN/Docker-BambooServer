@@ -1,5 +1,5 @@
 # BambooServer
-Bamboo server incl OpenJDK8, Git, Mercurial, Subversion, Maven3
+Bamboo server incl OpenJDK8, NodeJS6, Git, Mercurial, Maven3
 
 ## MySQL server
 The docker image will download a MySQL driver on initial setup.
